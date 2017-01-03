@@ -1,0 +1,273 @@
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<h1>Depth First Search</h1>
+<p>DFS is mainly used to visit an entire graph as opposed to breadth first search which is a layer by layer traversal more commonly used for shortest paths. Recursively exploring a graph, backtracking as necessary. Careful not to repeat</p>
+<pre class="prettyprint">
+<code class="language-java">
+class Graph {
+	HashMap&lt;Vertex, List&lt;Vertex&gt;&gt; adjList = new HasMap&lt;&gt;();
+	List&lt;Vertex&gt; vertices = new ArrayList&lt;&gt;();
+	...
+}
+</code>
+</pre>
+<pre class="prettyprint">
+<code class="language-java">
+/**
+ * This is what will explore the graph for all of the vertices.
+ * @param g input graph
+*/
+void dfs(Graph g) {
+	HashMap&lt;Vertex, Vertex&gt; parentMap = new HashMap&lt;&gt;();
+	for(Vertex v : g.vertices()) {
+		if(!parentMap.containsKey(v)) {
+			parentMap.put(v, null);
+			dfsVisit(g, v, parentMap);
+		}
+	}
+}
+
+/**
+ * Runs dfs from a source node.
+ * @param g contains an adjacency list, used for mapping vertices to outgoing edges
+ * @param root current node in the recursive stack
+ * @param parentMap keeps track if the current root has been visited or not
+*/
+void dfsVisit(Graph g, Vertex root, HashMap&lt;Vertex, Vertex&gt; parentMap) {
+	 visit(root);
+	 Iterator&lt;Vertex&gt; edges = g.adjList.get(root);
+	 while(edges.hasNext()) {
+	 	Vertex v = edges.next();
+	 	if(!parentMap.containsKey(v)) {
+	 		parentMap.put(v, root);
+	 		dfsVisit(g, v, parentMap);
+	 	}
+	 }
+
+}
+</code>
+</pre>
+
+
+<h3>Running Time:</h3>
+	<li>O(|V| + |E|), Linear Time Algorithm, where V is the total number of vertices and E is the sum of all edges.</li>
+	<li>dfsVisit is called at most once per vertex V. And the cost of dfsVisit is the sum of all outgoing edges.</li>
+<h3>Edge Classification:</h3>
+	<li>Tree Edge: This occurs when we visit a new vertex via an outgoing Edge. This application is seen when we run dfsVisit, every outgoing edge that has not been visited is a tree edge.</li>
+	<li>Forward Edge: From a node to a descendant in a tree.</li>
+	<li>Backward Edge: From a node to an anscestor in a tree. This edge classification is illustrated below when discussing cycle detection.</li>
+	<li>Cross Edge: Connection from a node to a node that is neither an anscestor or desendant.</li>
+
+<h3>Application 1: Cycle Detection</h3>
+<p>Graph G has a cycle iff G contains a back edge. Both directed and undirected graph.</p>
+<pre class="prettyprint">
+<code class="language-java">
+boolean hasCycle(Graph g) {
+	HashMap&lt;Vertex, Boolean&gt; visited = new HashMap&lt;&gt;();	
+	HashMap&lt;Vertex, Boolean&gt; recursiveStack = new HashMap&lt;&gt;();	
+	for(Vertex v : g.vertices) {
+		if(!visited.containsKey(v)) {
+			if(hasCycleUtil(v, visited, recursiveStack)) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+boolean hasCycleUtil(ertex curr, HashMap&lt;Vertex, Boolean&gt; visited, HashMap&lt;Vertex, Boolean&gt; recursiveStack) {
+	if(!visited.containsKey(curr)) {
+		visited.put(curr, true);
+		recursiveStack.put(curr, true);
+		for(Vertex neighbor : curr.neighbors) {
+			if(!visited.containsKey(neighbor) AND hasCycleUtil(neighbor, visited, recursiveStack))
+				return true;
+			else if(recursiveStack.containsKey(neighbor) == true)
+				return true;
+		}
+
+	}
+	recursiveStack.put(curr, false);
+	return false;
+}
+</code>
+</pre>
+<!-- application 2 for dfs -->
+<h3>Application 2: Topological Sort</h3>
+<p>This algorithm work on a DAG, directed acyclic graphs, definition of a topological sort is an ordering of all vertices in a graph such that any edge UV in graph G, vertex U comes before V always.</p>
+<pre class="prettyprint">
+<code class="language-python">
+topologicalSort(g):
+	s = Stack()
+	visited = {}
+	# mark all as non-visited
+	for v in g.vertices:
+		visited[v] = False
+	# run DFS on non-visited vertices
+	for v in g.vertices:
+		if visited[v] == False:
+			topologicalSortUtil(v, s, visited);
+	while s.notEmpty():
+		print s.pop()
+
+topologicalSortUtil(v, s, visited):
+	visited[v] = true
+	for neighbor in v.neighbors:
+		if neighbor not in visited:
+			topologicalSortUtil(neighbor, s, visited)
+	s.push(v);
+</code>
+</pre>
+	
+
+
+<hr>
+<hr>
+<h1>Breadth First Search</h1>
+<p>BFS is a fundamental graph traversal algorithm used to explore a graph in a level by level order</p>
+<p>Sample code for BFS</p>
+<pre class="prettyprint">
+<code class="language-python">
+// this approaches BFS in a level by order fashion exhausting all edges that are 1 level, 2 level, ... n - 1 levels
+void BFS(Vertex root, Graph g) {
+	HashMap&lt;Vertex, Integer&gt;levelMap = new HashMap&lt;&gt;();
+	LinkedList&lt;Vertex&gt; queue = new LinkedList&lt;&gt;();
+	int i = 0;
+	levelMap.put(v, i);
+	queue.add(v);
+	while(!queue.isEmpty()) {
+		LinkedList&lt;Vertex&gt; next = new LinkedList&lt;&gt;();
+		for(Vertex u : queue) {
+			for(Vertex v : u.neighbors) {
+				if(!levelMap.containsKey(v)) {
+					levelMap.put(v, i+1);
+					next.add(v);
+				}
+			}
+		}
+		queue = next;
+		i += 1;
+	}
+}
+
+// more common approach to bfs
+void BFS(Vertex root) {
+	HashMap&lt;Vertex, Boolean&gt;visited = new HashMap&lt;&gt;();
+	LinkedList&lt;Vertex&gt; queue = new LinkedList&lt;&gt;();
+	visited.put(root, true);
+	queue.addLast(root);
+	while(!queue.isEmpty()) {
+		Vertex curr = queue.removeFirst();
+		visit(curr);
+		for(Vertex n : curr.neighbors) {
+			if(!visited.containsKey(n)) {
+				visited.put(n, true);
+				queue.addLast(n);
+			}
+		}
+	}
+}
+</code>
+</pre>
+
+<h3>Application One for BFS: Shortest Path</h3>
+<pre class="prettyprint">
+<code class="language-python">
+public class Main {
+
+    public static void main(String[] args) {
+        int[][] maze = {
+                {1, 1, 1, 1, 1},
+                {1, 0, 0, 0, 1},
+                {1, 1, 1, 1, 1}
+        };
+        Ball src = new Ball(0, 0);
+        Ball dst = new Ball(2, 3);
+        System.out.println(new Maze(maze).shortestPath(src, dst));
+    }
+}
+enum DIRECTION {
+    left,right,up,down
+}
+
+class Ball {
+    int x;
+    int y;
+    int dist;
+
+    Ball(int xx, int yy){
+        this.x = xx;
+        this.y = yy;
+    }
+
+    Ball move(DIRECTION d) {
+        Ball b = new Ball(x, y);
+        if(d == DIRECTION.up)
+            b.x = x - 1;
+        else if(d == DIRECTION.down)
+            b.x = x + 1;
+        else if(d == DIRECTION.left)
+            b.y = y - 1;
+        else
+            b.y = y + 1;
+        return b;
+    }
+}
+
+class Maze {
+    int[][] m;
+
+    Maze(int[][] m) {
+        this.m = m;
+    }
+
+    boolean validBall(Ball b) {
+        return b.x >= 0 AND b.x < m.length AND b.y >= 0 AND b.y < m[0].length
+                AND m[b.x][b.y] != 0;
+    }
+
+    int shortestPath(Ball src, Ball dst) {
+        DIRECTION[] dir = DIRECTION.values();
+        boolean[][] visited = new boolean[m.length][m[0].length];
+        LinkedList&lt;Ball&gt; queue = new LinkedList&lt;Ball&gt;();
+        src.dist = 0;
+        queue.add(src);
+        while (!queue.isEmpty()) {
+            Ball curr = queue.removeFirst();
+            if(curr.x == dst.x AND curr.y == dst.y)
+                return curr.dist;
+            if(visited[curr.x][curr.y] == false) {
+                for(DIRECTION d : dir) {
+                    Ball b = curr.move(d);
+                    b.dist = curr.dist + 1;
+                    if(validBall(b) AND visited[b.x][b.y] == false)
+                        queue.addLast(b);
+                }
+            }
+        }
+        return -1;
+    }
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<hr>
+<hr>
+<h1>Google Interview Questions</h1>
+<p>Problem: </p>
+<pre class="prettyprint">
+<code class="language-java">
+
+</code>
+</pre>
+
+
+
+
+
+
