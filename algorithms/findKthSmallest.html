@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>findKthSmallest</title>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+
+<!-- approach 1 -->
+<h1>
+	Sorting - Naive
+</h1>
+
+<p>
+	Naive approach is to sort numbers and return elements at index k-1
+
+</p>
+
+<pre class="prettyprint">
+<code class="language-java">
+int findKthSmallest(int[] arr, int k) {
+	Arrays.sort(arr);
+	return arr[k-1];
+}
+</code>
+</pre>
+
+
+<!-- approach 2 -->
+<h1>
+	HeapSort - Intermediate
+</h1>
+
+<p>
+	Construct a heap sort from input array and call extract_min k times
+
+</p>
+
+<pre class="prettyprint">
+<code class="language-java">
+// min-heap implementation heap sort implementation
+
+
+class HeapSort {
+
+    HeapSort(int[] input_arr) {
+        heap = input_arr;
+        num_elements = heap.length;
+
+        for(int i = input_arr.length / 2; i >= 0; --i) {
+            heapify(i);
+        }
+
+        num_elements = 0;
+    }
+
+    void heapify(int current_index) {
+
+        while(current_index < num_elements) {
+            int min_index = current_index;
+
+            int left = left_index(current_index);
+            int right = right_index(current_index);
+
+            if(left < num_elements && heap[left] < heap[current_index])
+                min_index = left;
+
+            if(right < num_elements && heap[right] < heap[min_index])
+                min_index = right;
+
+            if(current_index == min_index)
+                return;
+
+            swap(current_index, min_index);
+            current_index = min_index;
+        }
+    }
+
+    int extract_min() {
+        int min = heap[0];
+        heap[0] = heap[num_elements];
+        heapify(0);
+        num_elements -= 1;
+        return min;
+    }
+
+
+    int left_index(int index) {
+        return (2 * index) + 1;
+    }
+
+    int right_index(int index) {
+        return (2 * index) + 2;
+    }
+
+    int parent_index(int index) {
+        return index / 2;
+    }
+
+    int current_val(int index) {
+        return heap[index];
+    }
+
+
+    void swap(int i, int j) {
+        int t = heap[i];
+        heap[i] = heap[j];
+        heap[j] = t;
+    }
+
+
+    void insert_val(int new_val) {
+        heap[num_elements] = new_val;
+        int current_index = num_elements;
+        while(current_index > 0) {
+            if(parent_index(current_index) < current_val(current_index))
+                break; // done
+            swap(current_index, parent_index(current_index));
+        }
+        ++num_elements;
+    }
+}
+</code>
+</pre>
+
+<!-- approach 3 -->
+<h1>
+	QuickSelect - Optimal
+</h1>
+
+<p>
+	Uses quicksort ultill pivot returned is k itself
+
+</p>
+
+<pre class="prettyprint">
+<code class="language-java">
+int kthSmallest(int[] arr, int k) {
+	return kthSmallest(arr, 0, arr.length - 1, k);
+}
+
+int kthSmallest(int[] arr, int low, int high, int k) {
+	
+	// if sorted return k-1 index
+	int index = partition(arr, 0, arr.length - 1);
+
+	if(k - 1 == index)
+		return arr[index];
+	else if(k - 1 < index)
+		return kthSmallest(arr, low, index-1, k);
+	else
+		return kthSmallest(arr, index+1, high, k);
+
+}
+</code>
+</pre>
+
+
+
+</body>
+</html>
