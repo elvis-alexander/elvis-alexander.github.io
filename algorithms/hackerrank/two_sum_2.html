@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>findKthSmallest</title>
+	<title>Two sum - input array is sorted</title>
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
@@ -9,20 +9,74 @@
 
 <!-- approach 1 -->
 <h1>
-	Title
+	Two sum - input array is sorted
 </h1>
 
 <p>
-	Description
+	Naive approach two for loops scan.
+	
 </p>
 
 <pre class="prettyprint">
 <code class="language-java">
-CODE
+int[] twoSum(int[] arr, int target) {
+	int[] out = new int[2];
+	
+	for(int i = 0; i < arr.length; ++i) {
+		for(int j = i+1; j < arr.length; ++j) {
+			if(arr[i] + arr[j] == target) {
+				return new int[]{i+1, j+1};
+			}
+		}					
+	}    	
+	return out;     
+}
 </code>
 </pre>
 
 
+<!-- approach 2 -->
+<h1>
+	"O(n log n) appraoach
+</h1>
+<p>
+	Use binary search to find second number
+</p>
+
+<pre class="prettyprint">
+<code class="language-java">
+
+int bin_search(int[] arr, int l, int h, int val) {
+	
+	if(l > h)
+		return -1;
+	int mid = (h+l) / 2;
+	if(arr[mid] == val)
+		return mid;
+	else if(arr[mid] > val)
+		return bin_search(arr, l, mid_index-1, val);
+	else
+		return bin_search(arr, mid_index+1, h, val);
+}
+	
+int[] twoSum(int[] arr, int target) {
+	for(int i = 0; i < arr.length; ++i) {
+		int val = target - arr[i];
+		int index;
+		if( (index = bin_search(arr, i+1, arr.length-1, val)) != -1) {		      
+			return new int[]{i+1, index+1};
+		} 
+	}
+	return new int[]{};				      
+}
+<pre class="prettyprint">
+<code class="language-java">
+
+
+
+</code>
+</pre>
+	
 
 </body>
 </html>
