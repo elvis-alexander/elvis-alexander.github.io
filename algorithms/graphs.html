@@ -9,14 +9,45 @@
 
 
 <h1>Depth First Search</h1>
-<p>DFS is mainly used to visit an entire graph as opposed to breadth first search which is a layer by layer traversal more commonly used for shortest paths. Recursively exploring a graph, backtracking as necessary. Careful not to repeat</p>
+<h4>DFS is mainly used to visit an entire graph as opposed to breadth first search which is a layer by layer traversal more commonly used for shortest paths. Recursively exploring a graph, backtracking as necessary. Careful not to repeat</h4>
+
+
+<h2>Graph representations</h2>
 <pre class="prettyprint">
 <code class="language-java">
+
+/* simple representation no weights */
 class Graph {
-	HashMap&lt;Vertex, List&lt;Vertex&gt;&gt; adjList = new HasMap&lt;&gt;();
+	Map&lt;Integer, List&lt;Integer&gt;&gt; adjList = new HashMap&lt;&gt;();
+	...
+}
+
+/* graph representations for weighted graphs */
+class Graph {
+	HashMap&lt;Vertex, List&lt;Edge&gt;&gt; adjList = new HasMap&lt;&gt;();
 	List&lt;Vertex&gt; vertices = new ArrayList&lt;&gt;();
 	...
 }
+
+class Vertex&lt;T&gt; {
+	T data;
+	Vertex(T d) {
+		this.data = d;
+	}
+}
+
+/* for edges w/ weights associated w/ them */
+class Edge&lt;T&gt; {
+	T data;
+	int weight;
+
+	Edge(T d, int w) {
+		this.data = d;
+		this.weight = w;
+	}	
+}
+
+
 </code>
 </pre>
 <pre class="prettyprint">
