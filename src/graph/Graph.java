@@ -50,14 +50,34 @@ public class Graph {
         }
     }
 
-    /*public boolean containsCycle() {
+    public boolean containsCycle() {
         HashSet<Integer> visited = new HashSet<>();
         HashSet<Integer> recursiveStack = new HashSet<>();
-        for(Integer u: )
+        for(Integer u: adjList.keySet()) {
+            if(! visited.contains(u))
+                if(containsCycleUtil(u, visited, recursiveStack))
+                    return true;
+        }
+        // VISITED ALL VERTICES DETECTED NO CYCLE
+        return false;
 
-        return true;
+    }
 
-    }*/
+    private boolean containsCycleUtil(Integer u, HashSet<Integer> visited, HashSet<Integer> recursiveStack) {
+        visited.add(u);
+        recursiveStack.add(u);
+
+        for(Edge neighbor: adjList.get(u)) {
+            int v = neighbor.dst;
+
+            if(recursiveStack.contains(v))
+                return true;
+            else if(!visited.contains(v) && containsCycleUtil(v, visited, recursiveStack))
+                return true;
+        }
+        recursiveStack.remove(u);
+        return false;
+    }
 
     public LinkedList<Integer> topologicalSort() {
         return null;

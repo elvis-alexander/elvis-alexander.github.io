@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,19 +7,47 @@
 <body>
 
 
-<h1>Depth First Search</h1>
+<h1>Outline</h1>
+
+<li>Graph representation</li>
+<p>
+	Task's we want accomplished from a graph data structure perspective,
+	graph search, defined as finding a path from a start
+	vertex s to a desired vertex. Adjacency lists is the common approach to represent a graph in memory.
+	It is defined as an array of linked list, but more commonly in a general case can be represented as a map
+	of vertices (integer or object) to a list (linked) of vertices, can be simply integers or an object. This set of vertices can be a set of edges in order to
+	allow for weighted representation of an edge.
+
+	[a] -> [c] -> null
+	[b] -> [c] -> [a] -> null
+	[c] -> [b] -> null
+</p>
+
+<li>BFS</li>
+<p>This explores a graph from S - to find shortest edge paths, explores on a level-by-level basis</p>
+
+<li>DFS</li>
+<p>This process is similar to that of exploring a maze - i.e. follow a path until you get stuck
+backtrack along the breadcrubms until reach an unexplored neighbor and then recursively explore
+careful not to repeat</p>
+
+
+<li>Edge Classification</li>
+<li>Cycle testing</li>
+<li>Topological Sort</li>
+
+
+
 <p>
 	Brief:
 
 </p>
 
-<h4>DFS is mainly used to visit an entire graph as opposed to breadth first search which is a layer by layer traversal more commonly used for shortest paths. Recursively exploring a graph, backtracking as necessary. Careful not to repeat</h4>
-
 
 <h2>Graph representations</h2>
 <pre class="prettyprint">
 <code class="language-java">
-
+// DFS is mainly used to visit an entire graph as opposed to breadth first search which is a layer by layer traversal more commonly used for shortest paths. Recursively exploring a graph, backtracking as necessary. Careful not to repeat
 /* simple representation no weights */
 class Graph {
 	Map&lt;Integer, List&lt;Integer&gt;&gt; adjList = new HashMap&lt;&gt;();
@@ -124,9 +151,9 @@ boolean hasCycleUtil(ertex curr, HashMap&lt;Vertex, Boolean&gt; visited, HashMap
 		visited.put(curr, true);
 		recursiveStack.put(curr, true);
 		for(Vertex neighbor : curr.neighbors) {
-			if(!visited.containsKey(neighbor) AND hasCycleUtil(neighbor, visited, recursiveStack))
+			if(recursiveStack.containsKey(neighbor) == true)
 				return true;
-			else if(recursiveStack.containsKey(neighbor) == true)
+			if(!visited.containsKey(neighbor) AND hasCycleUtil(neighbor, visited, recursiveStack))
 				return true;
 		}
 
