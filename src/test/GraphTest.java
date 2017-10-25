@@ -93,7 +93,8 @@ public class GraphTest {
         negCycleGraph.addEdge(3, 4, 30);
         /* detects negative cycle */
         negCycleGraph.bellmanFord(1);
-
     }
+
+
 
 }

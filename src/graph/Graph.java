@@ -9,8 +9,6 @@ import java.util.*;
 public class Graph {
     Map<Integer, List<Edge>> adjList;
 
-
-
     /**
      * For the sake of cutting down on code adding vertices to the map by default
      * @param vertices
@@ -52,6 +50,20 @@ public class Graph {
         }
     }
 
+    /*public boolean containsCycle() {
+        HashSet<Integer> visited = new HashSet<>();
+        HashSet<Integer> recursiveStack = new HashSet<>();
+        for(Integer u: )
+
+        return true;
+
+    }*/
+
+    public LinkedList<Integer> topologicalSort() {
+        return null;
+    }
+
+
     public List bfs(int src) {
         List<Integer> bfsOrder = new ArrayList<>();
         Set<Integer> visited = new HashSet<>();
@@ -69,14 +81,6 @@ public class Graph {
             }
         }
         return bfsOrder;
-    }
-
-    public boolean containsCycle() {
-        return true;
-    }
-
-    public LinkedList<Integer> topologicalSort() {
-        return null;
     }
 
     public HashMap<Integer, Integer> bellmanFord(int src) {
