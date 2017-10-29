@@ -38,9 +38,95 @@ public Node mergeTrees(Node n1, Node n2) {
 
 </code>
 </pre>
-</ul>
 
 
+<pre class="prettyprint">
+<code class="language-java">
+public TreeNode trimBST(TreeNode root, int L, int R) {
+        if(root == null)
+            return null;
+        boolean inRange = root.val >= L && root.val <= R;
+        if(! inRange)
+            return trimBST(root.val < L ? root.right : root.left, L, R);
+        root.left = trimBST(root.left, L, R);
+        root.right = trimBST(root.right, L, R);
+        return root;
+}
+</code>
+</pre>
+
+<pre class="prettyprint">
+<code class="language-java">
+public int maxDepth(TreeNode root) {
+    return root == null ? 0 : (1 + Math.max(maxDepth(root.left), maxDepth(root.right)));
+}
+</code>
+</pre>
+
+
+<pre class="prettyprint">
+<code class="language-java">
+public TreeNode invertTree(TreeNode root) {
+    if(root == null)
+        return null;
+    TreeNode original_left = root.left;
+    root.left = invertTree(root.right);
+    root.right = invertTree(original_left);
+    return root;
+}
+</code>
+</pre>
+
+<pre class="prettyprint">
+<code class="language-java">
+public String tree2str(TreeNode t) {
+    // base cases
+    if(t == null)
+        return "";
+    boolean isLeaf = t.left == null && t.right == null;
+    if(isLeaf) return ""+t.val;
+
+    // recursive case
+    String init = String.format("%s(%s)", ""+t.val, tree2str(t.left));
+    if(t.right != null)
+        init += String.format("(%s)", tree2str(t.right));
+    return init;
+}
+</code>
+</pre>
+
+<pre class="prettyprint">
+<code class="language-java">
+
+</code>
+</pre>
+
+</code>
+</pre>
+
+<pre class="prettyprint">
+<code class="language-java">
+
+</code>
+</pre>
+
+</code>
+</pre>
+
+<pre class="prettyprint">
+<code class="language-java">
+
+</code>
+</pre>
+
+</code>
+</pre>
+
+<pre class="prettyprint">
+<code class="language-java">
+
+</code>
+</pre>
 
 
 </body>
