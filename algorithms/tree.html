@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trees</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+
+<pre class="prettyprint">
+<code class="language-java">
+public Node mergeTrees(Node n1, Node n2) {
+
+        if(n1 == null && n2 == null)
+            return null;
+
+        int val = (n1 == null) ? 0 : n1.val;
+        val += (n2 == null) ? 0 : n2.val;
+
+        Node n = (n1 == null) ? n2 : n1;
+        n.val = val;
+
+        n.left = mergeTrees(n1 == null ? null : n1.left, n2 == null ? null : n2.left);
+        n.right = mergeTrees(n1 == null ? null : n1.right, n2 == null ? null : n2.right);
+        return n;
+}
+
+</code>
+</pre>
+</ul>
+
+
+
+
+</body>
