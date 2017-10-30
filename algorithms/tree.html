@@ -21,19 +21,18 @@
 <pre class="prettyprint">
 <code class="language-java">
 public Node mergeTrees(Node n1, Node n2) {
+    if(n1 == null && n2 == null)
+        return null;
 
-        if(n1 == null && n2 == null)
-            return null;
+    int val = (n1 == null) ? 0 : n1.val;
+    val += (n2 == null) ? 0 : n2.val;
 
-        int val = (n1 == null) ? 0 : n1.val;
-        val += (n2 == null) ? 0 : n2.val;
+    Node n = (n1 == null) ? n2 : n1;
+    n.val = val;
 
-        Node n = (n1 == null) ? n2 : n1;
-        n.val = val;
-
-        n.left = mergeTrees(n1 == null ? null : n1.left, n2 == null ? null : n2.left);
-        n.right = mergeTrees(n1 == null ? null : n1.right, n2 == null ? null : n2.right);
-        return n;
+    n.left = mergeTrees(n1 == null ? null : n1.left, n2 == null ? null : n2.left);
+    n.right = mergeTrees(n1 == null ? null : n1.right, n2 == null ? null : n2.right);
+    return n;
 }
 
 </code>
@@ -97,9 +96,20 @@ public String tree2str(TreeNode t) {
 
 <pre class="prettyprint">
 <code class="language-java">
+public int sumOfLeftLeaves(TreeNode root) {
+    if(root == null)
+        return 0;
 
+    int val = 0;
+    if(root.left != null && (root.left.left == null && root.left.right == null))
+        val = root.left.val;
+    val += sumOfLeftLeaves(root.left);
+    val += sumOfLeftLeaves(root.right);
+    return val;
+}
 </code>
 </pre>
+
 
 </code>
 </pre>
