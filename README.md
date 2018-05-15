@@ -6,7 +6,7 @@
 
 ```
 Frequency
-	DONE - 301	Remove Invalid Parentheses	35.9%	Hard	
+	DONE_BUT_NOT_OPTIMAL - 301	Remove Invalid Parentheses	35.9%	Hard	
 	DONE 273	Integer to English Words	22.8%	Hard	
 	DONE 621	Task Scheduler	42.4%	Medium	
 	DONE 283	Move Zeroes	51.7%	Easy	
@@ -19,7 +19,7 @@ Frequency
 	158	Read N Characters Given Read4 II - Call multiple times	24.6%	Hard	
 	DONE 297	Serialize and Deserialize Binary Tree	35.3%	Hard	
 	DONE 15	3Sum	21.8%	Medium	
-	10	Regular Expression Matching	24.3%	Hard	
+	DONE 10	Regular Expression Matching	24.3%	Hard	
 	311	Sparse Matrix Multiplication	52.6%	Medium	
 	DONE 200	Number of Islands	36.8%	Medium	
 	DONE 543	Diameter of Binary Tree	44.9%	Easy	
@@ -83,7 +83,7 @@ Frequency
 	127	Word Ladder	20.2%	Medium	
 	554	Brick Wall	46.5%	Medium	
 	71	Simplify Path	26.4%	Medium	
-	44	Wildcard Matching	21.1%	Hard	
+	DONE_BUT_NOT_OPTIMAL 44	Wildcard Matching	21.1%	Hard	
 	28	Implement strStr()	29.1%	Easy	
 	90	Subsets II	38.5%	Medium	
 	647	Palindromic Substrings	54.7%	Medium	
