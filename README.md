@@ -12,23 +12,23 @@ Frequency
 	DONE 283	Move Zeroes	51.7%	Easy	
 	DONE 67	Add Binary	34.3%	Easy	
 	DONE 253	Meeting Rooms II	39.5%	Medium	
-	325	Maximum Size Subarray Sum Equals k	43.1%	Medium	
+	DONE 325	Maximum Size Subarray Sum Equals k	43.1%	Medium	
 	DONE 17	Letter Combinations of a Phone Number	36.7%	Medium	
 	DONE 91	Decode Ways	20.4%	Medium	
 	DONE 314	Binary Tree Vertical Order Traversal	38.0%	Medium	
 	158	Read N Characters Given Read4 II - Call multiple times	24.6%	Hard	
 	DONE 297	Serialize and Deserialize Binary Tree	35.3%	Hard	
-	15	3Sum	21.8%	Medium	
+	DONE 15	3Sum	21.8%	Medium	
 	10	Regular Expression Matching	24.3%	Hard	
 	311	Sparse Matrix Multiplication	52.6%	Medium	
-	200	Number of Islands	36.8%	Medium	
-	543	Diameter of Binary Tree	44.9%	Easy	
+	DONE 200	Number of Islands	36.8%	Medium	
+	DONE 543	Diameter of Binary Tree	44.9%	Easy	
 	278	First Bad Version	25.9%	Easy	
 	689	Maximum Sum of 3 Non-Overlapping Subarrays	41.0%	Hard	
 	277	Find the Celebrity	35.5%	Medium	
 	76	Minimum Window Substring	27.0%	Hard	
-	257	Binary Tree Paths	41.6%	Easy	
-	173	Binary Search Tree Iterator	43.7%	Medium	
+	DONE 257	Binary Tree Paths	41.6%	Easy	
+	DONE 73	Binary Search Tree Iterator	43.7%	Medium	
 	121	Best Time to Buy and Sell Stock	43.1%	Easy	
 	23	Merge k Sorted Lists	28.4%	Hard	
 	636	Exclusive Time of Functions	44.6%	Medium	
@@ -37,11 +37,11 @@ Frequency
 	680	Valid Palindrome II	32.2%	Easy	
 	282	Expression Add Operators	30.7%	Hard	
 	DONE 56	Merge Intervals	32.1%	Medium	
-	211	Add and Search Word - Data structure design	25.6%	Medium	
-	1	Two Sum	38.2%	Easy	
+	DONE 211	Add and Search Word - Data structure design	25.6%	Medium	
+	DONE 1	Two Sum	38.2%	Easy	
 	DONE 252	Meeting Rooms	49.0%	Easy	
 	341	Flatten Nested List Iterator	43.3%	Medium	
-	597	Friend Requests I: Overall Acceptance Rate	37.8%	Easy	
+	DONE 597	Friend Requests I: Overall Acceptance Rate	37.8%	Easy	
 	133	Clone Graph	25.2%	Medium	
 	98	Validate Binary Search Tree	24.1%	Medium	
 	43	Multiply Strings	28.1%	Medium	
@@ -129,7 +129,7 @@ Frequency
 	DONE 572	Subtree of Another Tree	40.2%	Easy	
 	
 	
-static class Edge {
+    static class Edge {
         int weight;
         int v;
         Edge(int v) {
@@ -145,8 +145,6 @@ static class Edge {
                 adjList[i] = new LinkedList<>();
         }
         void addEdge(int src, int dst) {
-
-
             adjList[src].add(new Edge(dst));
         }
         void bfs(int src) {
@@ -229,24 +227,6 @@ static class Edge {
             }
             stack.push(vertex);
         }
-    }
-
-    public static void main(String[] args) {
-        Graph g = new Graph(5);
-        g.addEdge(0, 1);
-        g.addEdge(0, 3);
-        g.addEdge(1, 3);
-        g.addEdge(1, 4);
-//        g.addEdge(2, 1);  creates cycle
-        g.addEdge(2, 3);
-        g.addEdge(4, 2);
-        g.bfs(0);
-        System.out.println();
-        g.dfs();
-        System.out.println();
-        System.out.print(g.isCyclic());
-        System.out.println();
-        g.topSort();
     }
 
 ```
