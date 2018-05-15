@@ -43,14 +43,14 @@ Frequency
 	341	Flatten Nested List Iterator	43.3%	Medium	
 	DONE 597	Friend Requests I: Overall Acceptance Rate	37.8%	Easy	
 	133	Clone Graph	25.2%	Medium	
-	98	Validate Binary Search Tree	24.1%	Medium	
+	DONE 98	Validate Binary Search Tree	24.1%	Medium	
 	43	Multiply Strings	28.1%	Medium	
 	161	One Edit Distance	31.6%	Medium	
-	78	Subsets	45.2%	Medium	
-	215	Kth Largest Element in an Array	40.9%	Medium	
+	DONE 78	Subsets	45.2%	Medium	
+	DONE 215	Kth Largest Element in an Array	40.9%	Medium	
 	139	Word Break	31.7%	Medium	
-	721	Accounts Merge	33.2%	Medium	
-	285	Inorder Successor in BST	35.2%	Medium	
+	DONE_BUT_NOT_OPTIMAL 721	Accounts Merge	33.2%	Medium	
+	DONE 285	Inorder Successor in BST	35.2%	Medium	
 	57	Insert Interval	29.1%	Hard	
 	88	Merge Sorted Array	32.3%	Easy	
 	602	Friend Requests II: Who Has the Most Friends	42.2%	Medium	
@@ -85,7 +85,7 @@ Frequency
 	71	Simplify Path	26.4%	Medium	
 	DONE_BUT_NOT_OPTIMAL 44	Wildcard Matching	21.1%	Hard	
 	28	Implement strStr()	29.1%	Easy	
-	90	Subsets II	38.5%	Medium	
+	DONE 	90	Subsets II	38.5%	Medium	
 	647	Palindromic Substrings	54.7%	Medium	
 	674	Longest Continuous Increasing Subsequence	42.5%	Easy	
 	377	Combination Sum IV	42.8%	Medium	
