@@ -29,7 +29,7 @@ Frequency
 	76	Minimum Window Substring	27.0%	Hard	
 	DONE 257	Binary Tree Paths	41.6%	Easy	
 	DONE 73	Binary Search Tree Iterator	43.7%	Medium	
-	121	Best Time to Buy and Sell Stock	43.1%	Easy	
+	DONE 121	Best Time to Buy and Sell Stock	43.1%	Easy	
 	23	Merge k Sorted Lists	28.4%	Hard	
 	636	Exclusive Time of Functions	44.6%	Medium	
 	157	Read N Characters Given Read4	28.8%	Easy	
