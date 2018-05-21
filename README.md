@@ -11,7 +11,7 @@ Frequency
 	DONE 621	Task Scheduler	42.4%	Medium	
 	DONE 283	Move Zeroes	51.7%	Easy	
 	DONE 67	Add Binary	34.3%	Easy	
-	DONE 253	Meeting Rooms II	39.5%	Medium	
+	DONE UNDER_IFFY 253	Meeting Rooms II	39.5%	Medium	
 	DONE 325	Maximum Size Subarray Sum Equals k	43.1%	Medium	
 	DONE 17	Letter Combinations of a Phone Number	36.7%	Medium	
 	DONE 91	Decode Ways	20.4%	Medium	
@@ -52,7 +52,7 @@ Frequency
 	DONE_BUT_NOT_OPTIMAL 721	Accounts Merge	33.2%	Medium	
 	DONE 285	Inorder Successor in BST	35.2%	Medium	
 	57	Insert Interval	29.1%	Hard	
-	88	Merge Sorted Array	32.3%	Easy	
+	DONE 88	Merge Sorted Array	32.3%	Easy	
 	602	Friend Requests II: Who Has the Most Friends	42.2%	Medium	
 	238	Product of Array Except Self	50.4%	Medium	
 	670	Maximum Swap	38.6%	Medium	
@@ -120,7 +120,7 @@ Frequency
 	750	Number Of Corner Rectangles	55.3%	Medium	
 	DONE - 265	Paint House II	38.4%	Hard	
 	764	Largest Plus Sign	37.9%	Medium	
-	784	Letter Case Permutation	52.7%	Easy	
+	DONE 784	Letter Case Permutation	52.7%	Easy	
 	275	H-Index II	34.9%	Medium	
 	535	Encode and Decode TinyURL	73.8%	Medium	
 	525	Contiguous Array	41.4%	Medium	
