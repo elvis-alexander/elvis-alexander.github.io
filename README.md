@@ -82,7 +82,7 @@ Frequency
 	128	Longest Consecutive Sequence	38.4%	Hard	
 	127	Word Ladder	20.2%	Medium	
 	554	Brick Wall	46.5%	Medium	
-	71	Simplify Path	26.4%	Medium	
+	DONE 71	Simplify Path	26.4%	Medium	
 	DONE_BUT_NOT_OPTIMAL 44	Wildcard Matching	21.1%	Hard	
 	28	Implement strStr()	29.1%	Easy	
 	DONE 	90	Subsets II	38.5%	Medium	
@@ -115,7 +115,7 @@ Frequency
 	673	Number of Longest Increasing Subsequence	31.7%	Medium	
 	653	Two Sum IV - Input is a BST	50.0%	Easy	
 	745	Prefix and Suffix Search	25.8%	Hard	
-	637	Average of Levels in Binary Tree	56.0%	Easy	
+	DONE 637	Average of Levels in Binary Tree	56.0%	Easy	
 	578	Get Highest Answer Rate Question	29.7%	Medium	
 	750	Number Of Corner Rectangles	55.3%	Medium	
 	DONE - 265	Paint House II	38.4%	Hard	
