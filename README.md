@@ -42,9 +42,9 @@ Frequency
 	DONE 252	Meeting Rooms	49.0%	Easy	
 	341	Flatten Nested List Iterator	43.3%	Medium	
 	DONE 597	Friend Requests I: Overall Acceptance Rate	37.8%	Easy	
-	133	Clone Graph	25.2%	Medium	
+	DONE 133	Clone Graph	25.2%	Medium	
 	DONE 98	Validate Binary Search Tree	24.1%	Medium	
-	43	Multiply Strings	28.1%	Medium	
+	DONE 43	Multiply Strings	28.1%	Medium	
 	161	One Edit Distance	31.6%	Medium	
 	DONE 78	Subsets	45.2%	Medium	
 	DONE 215	Kth Largest Element in an Array	40.9%	Medium	
@@ -59,7 +59,7 @@ Frequency
 	DONE 785	Is Graph Bipartite?	38.6%	Medium	
 	DONE 75	Sort Colors	39.1%	Medium	
 	13	Roman to Integer	48.3%	Easy	
-	33	Search in Rotated Sorted Array	31.9%	Medium	
+	DONE 33	Search in Rotated Sorted Array	31.9%	Medium	
 	146	LRU Cache	20.1%	Hard	
 	642	Design Search Autocomplete System	30.7%	Hard	
 	206	Reverse Linked List	47.0%	Easy	
