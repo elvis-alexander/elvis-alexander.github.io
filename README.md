@@ -62,10 +62,10 @@ Frequency
 	DONE 33	Search in Rotated Sorted Array	31.9%	Medium	
 	146	LRU Cache	20.1%	Hard	
 	642	Design Search Autocomplete System	30.7%	Hard	
-	206	Reverse Linked List	47.0%	Easy	
+	DONE 206	Reverse Linked List	47.0%	Easy	
 	523	Continuous Subarray Sum	23.4%	Medium	
 	79	Word Search	28.2%	Medium	
-	20	Valid Parentheses	34.1%	Easy	
+	DONE 20	Valid Parentheses	34.1%	Easy	
 	236	Lowest Common Ancestor of a Binary Tree	29.8%	Medium	
 	DONE 49	Group Anagrams	38.9%	Medium	
 	286	Walls and Gates	45.5%	Medium	
@@ -73,7 +73,7 @@ Frequency
 	477	Total Hamming Distance	47.5%	Medium	
 	38	Count and Say	36.9%	Easy	
 	218	The Skyline Problem	29.2%	Hard	
-	208	Implement Trie (Prefix Tree)	31.2%	Medium	
+	DONE 208	Implement Trie (Prefix Tree)	31.2%	Medium	
 	102	Binary Tree Level Order Traversal	42.9%	Medium	
 	209	Minimum Size Subarray Sum	32.3%	Medium	
 	398	Random Pick Index	44.8%	Medium	
