@@ -101,7 +101,7 @@ Frequency
 	85	Maximal Rectangle	29.8%	Hard	
 	26	Remove Duplicates from Sorted Array	36.6%	Easy	
 	410	Split Array Largest Sum	39.4%	Hard	
-	210	Course Schedule II	30.4%	Medium	
+	DONE 210	Course Schedule II	30.4%	Medium	
 	261	Graph Valid Tree	38.5%	Medium	
 	274	H-Index	33.8%	Medium	
 	221	Maximal Square	30.5%	Medium	
