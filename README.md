@@ -71,7 +71,7 @@ Frequency
 	286	Walls and Gates	45.5%	Medium	
 	494	Target Sum	43.8%	Medium	
 	477	Total Hamming Distance	47.5%	Medium	
-	38	Count and Say	36.9%	Easy	
+	DONE 38	Count and Say	36.9%	Easy	
 	218	The Skyline Problem	29.2%	Hard	
 	DONE 208	Implement Trie (Prefix Tree)	31.2%	Medium	
 	102	Binary Tree Level Order Traversal	42.9%	Medium	
@@ -125,7 +125,7 @@ Frequency
 	535	Encode and Decode TinyURL	73.8%	Medium	
 	525	Contiguous Array	41.4%	Medium	
 	801	Minimum Swaps To Make Sequences Increasing	26.4%	Medium	
-	824	Goat Latin	56.7%	Easy	
+	DONE 824	Goat Latin	56.7%	Easy	
 	DONE 572	Subtree of Another Tree	40.2%	Easy	
 	
 	
