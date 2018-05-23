@@ -40,7 +40,7 @@ Frequency
 	DONE 211	Add and Search Word - Data structure design	25.6%	Medium	
 	DONE 1	Two Sum	38.2%	Easy	
 	DONE 252	Meeting Rooms	49.0%	Easy	
-	341	Flatten Nested List Iterator	43.3%	Medium	
+	DONE 341	Flatten Nested List Iterator	43.3%	Medium	
 	DONE 597	Friend Requests I: Overall Acceptance Rate	37.8%	Easy	
 	DONE 133	Clone Graph	25.2%	Medium	
 	DONE 98	Validate Binary Search Tree	24.1%	Medium	
