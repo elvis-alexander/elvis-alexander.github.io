@@ -26,7 +26,7 @@ Frequency
 	278	First Bad Version	25.9%	Easy	
 	689	Maximum Sum of 3 Non-Overlapping Subarrays	41.0%	Hard	
 	277	Find the Celebrity	35.5%	Medium	
-	76	Minimum Window Substring	27.0%	Hard	
+	DONE 76	Minimum Window Substring	27.0%	Hard	
 	DONE 257	Binary Tree Paths	41.6%	Easy	
 	DONE 73	Binary Search Tree Iterator	43.7%	Medium	
 	DONE 121	Best Time to Buy and Sell Stock	43.1%	Easy	
