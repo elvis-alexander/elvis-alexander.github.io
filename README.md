@@ -53,7 +53,7 @@ Frequency
 	DONE 285	Inorder Successor in BST	35.2%	Medium	
 	57	Insert Interval	29.1%	Hard	
 	DONE 88	Merge Sorted Array	32.3%	Easy	
-	602	Friend Requests II: Who Has the Most Friends	42.2%	Medium	
+	DONE 602	Friend Requests II: Who Has the Most Friends	42.2%	Medium	
 	238	Product of Array Except Self	50.4%	Medium	
 	670	Maximum Swap	38.6%	Medium	
 	DONE 785	Is Graph Bipartite?	38.6%	Medium	
@@ -77,7 +77,7 @@ Frequency
 	102	Binary Tree Level Order Traversal	42.9%	Medium	
 	209	Minimum Size Subarray Sum	32.3%	Medium	
 	398	Random Pick Index	44.8%	Medium	
-	380	Insert Delete GetRandom O(1)	40.0%	Medium	
+	DONE 380	Insert Delete GetRandom O(1)	40.0%	Medium	
 	269	Alien Dictionary	26.5%	Hard	
 	128	Longest Consecutive Sequence	38.4%	Hard	
 	127	Word Ladder	20.2%	Medium	
