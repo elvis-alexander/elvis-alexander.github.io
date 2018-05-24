@@ -33,8 +33,8 @@ Frequency
 	23	Merge k Sorted Lists	28.4%	Hard	
 	636	Exclusive Time of Functions	44.6%	Medium	
 	157	Read N Characters Given Read4	28.8%	Easy	
-	125	Valid Palindrome	27.3%	Easy	
-	680	Valid Palindrome II	32.2%	Easy	
+	DONE 125	Valid Palindrome	27.3%	Easy	
+	DONE 680	Valid Palindrome II	32.2%	Easy	
 	282	Expression Add Operators	30.7%	Hard	
 	DONE 56	Merge Intervals	32.1%	Medium	
 	DONE 211	Add and Search Word - Data structure design	25.6%	Medium	
