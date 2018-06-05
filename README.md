@@ -20,7 +20,7 @@ Frequency
 	DONE 297	Serialize and Deserialize Binary Tree	35.3%	Hard	
 	DONE 15	3Sum	21.8%	Medium	
 	DONE 10	Regular Expression Matching	24.3%	Hard	
-	311	Sparse Matrix Multiplication	52.6%	Medium	
+	DONE 311	Sparse Matrix Multiplication	52.6%	Medium	
 	DONE 200	Number of Islands	36.8%	Medium	
 	DONE 543	Diameter of Binary Tree	44.9%	Easy	
 	278	First Bad Version	25.9%	Easy	
@@ -32,10 +32,10 @@ Frequency
 	DONE 121	Best Time to Buy and Sell Stock	43.1%	Easy	
 	23	Merge k Sorted Lists	28.4%	Hard	
 	636	Exclusive Time of Functions	44.6%	Medium	
-	157	Read N Characters Given Read4	28.8%	Easy	
+	DONE 157	Read N Characters Given Read4	28.8%	Easy	
 	DONE 125	Valid Palindrome	27.3%	Easy	
 	DONE 680	Valid Palindrome II	32.2%	Easy	
-	282	Expression Add Operators	30.7%	Hard	
+	DONE 282	Expression Add Operators	30.7%	Hard	
 	DONE 56	Merge Intervals	32.1%	Medium	
 	DONE 211	Add and Search Word - Data structure design	25.6%	Medium	
 	DONE 1	Two Sum	38.2%	Easy	
@@ -80,13 +80,13 @@ Frequency
 	DONE 380	Insert Delete GetRandom O(1)	40.0%	Medium	
 	269	Alien Dictionary	26.5%	Hard	
 	128	Longest Consecutive Sequence	38.4%	Hard	
-	127	Word Ladder	20.2%	Medium	
-	554	Brick Wall	46.5%	Medium	
+	DONE 127	Word Ladder	20.2%	Medium	
+	DONE 554	Brick Wall	46.5%	Medium	
 	DONE 71	Simplify Path	26.4%	Medium	
-	DONE_BUT_NOT_OPTIMAL 44	Wildcard Matching	21.1%	Hard	
-	28	Implement strStr()	29.1%	Easy	
+	DONE 44	Wildcard Matching	21.1%	Hard	
+	DONE 28	Implement strStr()	29.1%	Easy	
 	DONE 	90	Subsets II	38.5%	Medium	
-	647	Palindromic Substrings	54.7%	Medium	
+	DONE 647	Palindromic Substrings	54.7%	Medium	
 	674	Longest Continuous Increasing Subsequence	42.5%	Easy	
 	377	Combination Sum IV	42.8%	Medium	
 	639	Decode Ways II	24.4%	Hard	
