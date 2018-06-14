@@ -23,7 +23,7 @@ Frequency
 	DONE 311	Sparse Matrix Multiplication	52.6%	Medium	
 	DONE 200	Number of Islands	36.8%	Medium	
 	DONE 543	Diameter of Binary Tree	44.9%	Easy	
-	278	First Bad Version	25.9%	Easy	
+	DONE 278	First Bad Version	25.9%	Easy	
 	689	Maximum Sum of 3 Non-Overlapping Subarrays	41.0%	Hard	
 	277	Find the Celebrity	35.5%	Medium	
 	DONE 76	Minimum Window Substring	27.0%	Hard	
