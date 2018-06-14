@@ -98,7 +98,7 @@ Frequency
 	461	Hamming Distance	69.5%	Easy	
 	68	Text Justification	20.2%	Hard	
 	50	Pow(x, n)	26.1%	Medium	
-	85	Maximal Rectangle	29.8%	Hard	
+	DONE 85	Maximal Rectangle	29.8%	Hard	
 	26	Remove Duplicates from Sorted Array	36.6%	Easy	
 	410	Split Array Largest Sum	39.4%	Hard	
 	DONE 210	Course Schedule II	30.4%	Medium	
